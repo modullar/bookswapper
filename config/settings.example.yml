@@ -1,0 +1,14 @@
+# [START settings]
+default: &default
+  project_id: udacity-project-219417
+  gcs_bucket: bookswap_bucket
+  oauth2:
+    client_id: 523813851585-3nbej53c0oga2b3sp69ekcren8pvuo6o.apps.googleusercontent.com
+    client_secret: o6pe7cIfQk3AslLsTqmG2dNP
+
+
+development:
+  <<: *default
+
+production:
+  <<: *default

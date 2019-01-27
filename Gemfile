@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
 
-ruby '2.3.4'
+ruby '2.3.1'
 
 gem 'rails', '5.1.6.1'
+gem 'unicorn'
 
 gem 'coffee-rails', '~> 4.2.2'
 gem 'uglifier', '~> 3.2.0'
@@ -16,6 +17,8 @@ gem 'jquery-rails', '~> 4.3.1'
 
 # gem 'heroku' install the Heroku toolbelt (https://toolbelt.heroku.com/) instead (as gem had some problems)
 gem "passenger", '~> 5.1.4'
+
+gem 'unicorn'
 
 gem "mysql2", '0.4.10'
 gem "bcrypt", '3.1.12'

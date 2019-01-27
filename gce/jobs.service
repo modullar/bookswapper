@@ -1,0 +1,16 @@
+# Worker Service
+
+[Unit]
+Description=Jobs Worker
+After=network.target
+
+[Service]
+Environment="GEM_HOME=/opt/gem"
+User=railsapp
+Type=simple
+WorkingDirectory=/opt/app/
+ExecStart=/usr/local/bin/bundle exec rake jobs:work RAILS_ENV=production
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

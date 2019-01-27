@@ -18,4 +18,4 @@ staging:
   # Add local `staging` environment configuration overrides here
 
 production:
-  # Add local `production` environment configuration overrides here
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
