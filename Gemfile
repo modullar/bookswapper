@@ -3,7 +3,6 @@ source 'http://rubygems.org'
 ruby '2.3.1'
 
 gem 'rails', '5.1.6.1'
-gem 'unicorn'
 
 gem 'coffee-rails', '~> 4.2.2'
 gem 'uglifier', '~> 3.2.0'
