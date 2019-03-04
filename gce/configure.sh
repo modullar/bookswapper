@@ -23,8 +23,17 @@ service google-fluentd restart &
 apt-get update
 
 
-# Install other dependencies
-apt-get install -y git ruby ruby-dev build-essential libxml2-dev curl zlib1g-dev nginx mysql-client libmysqlclient-dev libsqlite3-dev imagemagick sphinxsearch
+# Install dependencies
+apt-get install -y git ruby-dev build-essential libxml2-dev curl zlib1g-dev nginx mysql-client libmysqlclient-dev libsqlite3-dev imagemagick sphinxsearch
+
+# install ruby 2.3.4 using rvm
+curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
+curl -sSL https://get.rvm.io | bash -s stable
+source ~/.rvm/scripts/rvm
+rvm install 2.3.4
+rvm rubygems current
+
 # Install Nodejs 7.8
 mkdir /opt/nodejs
 curl https://nodejs.org/dist/v7.8.0/node-v7.8.0-linux-x64.tar.gz | tar xvzf - -C /opt/nodejs --strip-components=1
